@@ -48,7 +48,7 @@
         "sameAs": [
           "https://www.unsw.edu.au/staff/yue-jiang",
           "https://researchers.mq.edu.au/en/persons/yue-jiang/",
-          "https://www.linkedin.com/in/yue-jiang-phd-2999b3197/"
+          "https://www.linkedin.com/in/yue-jiang-2999b3197"
         ]
       }
     </script>
@@ -146,7 +146,39 @@
           <div class="research-grid">
             <article class="research-card research-card-featured">
               <span class="research-number">01</span>
-              <div class="research-glyph glyph-wave" aria-hidden="true"></div>
+              <div class="research-visual visual-mechanical" aria-hidden="true">
+                <svg viewBox="0 0 360 250" role="presentation">
+                  <defs>
+                    <linearGradient id="mech-core" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#f8cb78" />
+                      <stop offset="1" stop-color="#ff826c" />
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" stroke="#a9e4d7" stroke-width="2">
+                    <ellipse class="wave-ring wave-1" cx="180" cy="126" rx="58" ry="30" />
+                    <ellipse class="wave-ring wave-2" cx="180" cy="126" rx="94" ry="49" />
+                    <ellipse class="wave-ring wave-3" cx="180" cy="126" rx="135" ry="70" />
+                  </g>
+                  <g class="mech-core">
+                    <path d="M180 83 218 104v44l-38 21-38-21v-44Z" fill="url(#mech-core)" />
+                    <circle cx="180" cy="126" r="15" fill="#0b2533" />
+                    <circle cx="180" cy="126" r="5" fill="#fff" />
+                    <path d="m153 105 54 42M207 105l-54 42" stroke="#fff" stroke-width="2" opacity=".6" />
+                  </g>
+                  <g class="charge charge-left">
+                    <circle cx="69" cy="112" r="8" fill="#7fd8e7" />
+                    <text x="69" y="116" text-anchor="middle">−</text>
+                  </g>
+                  <g class="charge charge-right">
+                    <circle cx="291" cy="139" r="8" fill="#f8cb78" />
+                    <text x="291" y="143" text-anchor="middle">+</text>
+                  </g>
+                  <path class="energy-path" d="M34 78c37-34 76-44 111-31M326 176c-39 29-81 35-116 18" fill="none" stroke="#ff826c" stroke-linecap="round" stroke-width="3" />
+                  <path d="m137 42 12 6-11 8M218 198l-12-6 11-8" fill="none" stroke="#ff826c" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                  <text class="svg-label" x="20" y="222">VIBRATION</text>
+                  <text class="svg-label" x="252" y="222">CHARGE</text>
+                </svg>
+              </div>
               <h3>Mechanically driven catalysis</h3>
               <p>
                 Piezo-, sono-, and mechanochemical pathways that convert vibration into charge
@@ -160,7 +192,33 @@
             </article>
             <article class="research-card">
               <span class="research-number">02</span>
-              <div class="research-glyph glyph-drop" aria-hidden="true"></div>
+              <div class="research-visual visual-hydrogen" aria-hidden="true">
+                <svg viewBox="0 0 360 210" role="presentation">
+                  <defs>
+                    <linearGradient id="water-drop" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#8be0e6" />
+                      <stop offset="1" stop-color="#2aa7c6" />
+                    </linearGradient>
+                    <linearGradient id="catalyst-bar" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0" stop-color="#ff826c" />
+                      <stop offset="1" stop-color="#f8cb78" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="66" cy="48" r="20" fill="#f8cb78" />
+                  <g class="photo-rays" stroke="#f8cb78" stroke-linecap="round" stroke-width="3">
+                    <path d="M66 13v-9M66 92v-9M31 48h-9M110 48h-9M41 23l-7-7M98 80l-7-7M91 23l7-7M34 80l7-7" />
+                  </g>
+                  <path class="hydrogen-drop" d="M174 23c-18 28-51 61-51 97a51 51 0 0 0 102 0c0-36-33-69-51-97Z" fill="url(#water-drop)" opacity=".92" />
+                  <path d="M137 125c20 11 55 11 75 0M143 141c18 9 45 9 63 0" fill="none" stroke="#dff8f7" stroke-linecap="round" stroke-width="3" opacity=".8" />
+                  <rect x="109" y="171" width="130" height="13" rx="6.5" fill="url(#catalyst-bar)" />
+                  <g class="bubble bubble-1"><circle cx="257" cy="122" r="18" fill="#dff8f7" stroke="#2aa7c6" /><text x="257" y="127">H₂</text></g>
+                  <g class="bubble bubble-2"><circle cx="294" cy="78" r="13" fill="#dff8f7" stroke="#2aa7c6" /><text x="294" y="82">H₂</text></g>
+                  <g class="bubble bubble-3"><circle cx="326" cy="43" r="9" fill="#dff8f7" stroke="#2aa7c6" /></g>
+                  <path class="electron-flow" d="M94 58c34 3 51 22 60 48" fill="none" stroke="#ff826c" stroke-dasharray="5 7" stroke-linecap="round" stroke-width="3" />
+                  <text class="svg-label dark" x="18" y="201">LIGHT + WATER</text>
+                  <text class="svg-label dark" x="271" y="201">H₂</text>
+                </svg>
+              </div>
               <h3>Green hydrogen</h3>
               <p>
                 Defect-engineered and heterojunction catalysts for hydrogen generation from water
@@ -169,7 +227,35 @@
             </article>
             <article class="research-card">
               <span class="research-number">03</span>
-              <div class="research-glyph glyph-loop" aria-hidden="true"></div>
+              <div class="research-visual visual-circularity" aria-hidden="true">
+                <svg viewBox="0 0 360 210" role="presentation">
+                  <defs>
+                    <marker id="cycle-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                      <path d="m0 0 10 5-10 5Z" fill="#117a78" />
+                    </marker>
+                  </defs>
+                  <path class="cycle-path" d="M85 67a104 68 0 0 1 193 5" fill="none" marker-end="url(#cycle-arrow)" stroke="#117a78" stroke-width="4" />
+                  <path class="cycle-path cycle-path-return" d="M276 147a104 68 0 0 1-193-5" fill="none" marker-end="url(#cycle-arrow)" stroke="#ff826c" stroke-width="4" />
+                  <g class="waste-icon">
+                    <rect x="46" y="79" width="39" height="58" rx="8" fill="#d8eef0" stroke="#117a78" stroke-width="2" />
+                    <path d="M57 78v-12h17v12M54 98h23" fill="none" stroke="#117a78" stroke-width="3" />
+                    <path d="M99 126c19-25 36-24 47-19-7 22-23 33-47 19Z" fill="#9fdac1" />
+                    <path d="m102 125 34-13" stroke="#0b705e" stroke-linecap="round" stroke-width="2" />
+                  </g>
+                  <g class="value-icon">
+                    <path d="M270 80c-13 18-29 35-29 55a29 29 0 0 0 58 0c0-20-16-37-29-55Z" fill="#f8cb78" stroke="#e89a46" stroke-width="2" />
+                    <circle cx="270" cy="130" r="7" fill="#fff5d5" />
+                  </g>
+                  <g class="molecule" fill="#fff" stroke="#8d68c7" stroke-width="3">
+                    <path d="m155 83 28-18 30 18v33l-30 18-28-18Z" fill="#eee8fa" />
+                    <circle cx="155" cy="83" r="8" /><circle cx="183" cy="65" r="8" /><circle cx="213" cy="83" r="8" />
+                    <circle cx="213" cy="116" r="8" /><circle cx="183" cy="134" r="8" /><circle cx="155" cy="116" r="8" />
+                  </g>
+                  <text class="svg-label dark" x="27" y="195">WASTE</text>
+                  <text class="svg-label dark" x="151" y="195">CATALYSIS</text>
+                  <text class="svg-label dark" x="285" y="195">VALUE</text>
+                </svg>
+              </div>
               <h3>Waste-to-value chemistry</h3>
               <p>
                 Catalytic reforming of plastics, textiles, and biomass into syngas and sustainable
@@ -178,7 +264,26 @@
             </article>
             <article class="research-card">
               <span class="research-number">04</span>
-              <div class="research-glyph glyph-lattice" aria-hidden="true"></div>
+              <div class="research-visual visual-lattice" aria-hidden="true">
+                <svg viewBox="0 0 360 210" role="presentation">
+                  <g class="lattice-lines" fill="none" stroke="#7cbfbe" stroke-width="2">
+                    <path d="m64 66 80-38 80 38-80 38Zm80 38v73M64 66v72l80 39 80-39V66M104 47l80 39v72M184 47l-80 39v72M64 102l80 39 80-39" />
+                  </g>
+                  <g class="lattice-nodes" fill="#117a78">
+                    <circle cx="64" cy="66" r="6" /><circle cx="144" cy="28" r="6" /><circle cx="224" cy="66" r="6" />
+                    <circle cx="64" cy="138" r="6" /><circle cx="144" cy="104" r="6" /><circle cx="224" cy="138" r="6" />
+                    <circle cx="144" cy="177" r="6" /><circle cx="104" cy="86" r="5" /><circle cx="184" cy="86" r="5" />
+                    <circle cx="104" cy="158" r="5" /><circle cx="184" cy="158" r="5" />
+                  </g>
+                  <circle class="defect-halo" cx="144" cy="104" r="24" fill="#ff826c" opacity=".22" />
+                  <circle class="defect-node" cx="144" cy="104" r="10" fill="#ff826c" stroke="#fff" stroke-width="3" />
+                  <path class="dopant-path" d="M250 48c35 16 42 42 17 66" fill="none" stroke="#8d68c7" stroke-dasharray="6 7" stroke-linecap="round" stroke-width="3" />
+                  <circle class="dopant-node" cx="257" cy="47" r="10" fill="#8d68c7" />
+                  <path d="m264 113 7 2-1-7" fill="none" stroke="#8d68c7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                  <text class="svg-label dark" x="247" y="139">DOPANT</text>
+                  <text class="svg-label dark" x="125" y="205">DEFECT</text>
+                </svg>
+              </div>
               <h3>Functional oxide design</h3>
               <p>
                 Composition, defects, interfaces, and high-entropy architectures that tune material
@@ -194,7 +299,7 @@
           <div class="section-intro publication-heading">
             <div>
               <p class="eyebrow">Selected publications</p>
-              <h2>Research at the intersection of materials and reaction engineering.</h2>
+              <h2>Research at the intersection of functional materials and catalysis engineering.</h2>
             </div>
             <a class="button button-outline" href="publications.html">Browse all 30 papers</a>
           </div>
@@ -326,7 +431,7 @@
             <div class="profile-links" aria-label="Professional profiles">
               <a href="https://www.unsw.edu.au/staff/yue-jiang" target="_blank" rel="noreferrer">UNSW</a>
               <a href="https://researchers.mq.edu.au/en/persons/yue-jiang/" target="_blank" rel="noreferrer">Macquarie</a>
-              <a href="https://www.linkedin.com/in/yue-jiang-phd-2999b3197/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/yue-jiang-2999b3197" target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
           </div>
         </div>
