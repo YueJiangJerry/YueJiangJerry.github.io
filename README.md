@@ -2,6 +2,9 @@
 
 A lightweight static research website built from the August 2026 CV. It requires no build system and can be hosted directly on GitHub Pages.
 
+- Live site: <https://yuejiangjerry.github.io/>
+- Repository: <https://github.com/YueJiangJerry/YueJiangJerry.github.io>
+
 ## Preview locally
 
 From this folder, run:
@@ -12,15 +15,9 @@ python -m http.server 8080
 
 Then open `http://localhost:8080`.
 
-## Publish with GitHub Pages
+## Deployment
 
-1. Create a public GitHub repository named `YueJiangJerry.github.io`.
-2. Upload every file and folder from this directory to the repository root.
-3. In the repository, open **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**, choose `main` and `/ (root)`, then save.
-5. GitHub will display the public URL once deployment finishes.
-
-The default address will be `https://yuejiangjerry.github.io/`.
+The site is published from the `main` branch of `YueJiangJerry/YueJiangJerry.github.io`. Changes committed to that branch are deployed automatically by GitHub Pages.
 
 ## Update content
 
