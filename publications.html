@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b2533" />
+    <meta name="description" content="Publications by materials scientist Dr Yue Jiang." />
+    <link rel="canonical" href="https://yuejiangjerry.github.io/publications.html" />
+    <title>Publications — Yue Jiang</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header site-header-solid" data-header>
+      <div class="shell nav-wrap">
+        <a class="brand" href="index.html" aria-label="Yue Jiang, home">
+          <span class="brand-mark" aria-hidden="true">YJ</span>
+          <span class="brand-name">Yue Jiang</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="index.html#research">Research</a>
+          <a href="publications.html" aria-current="page">Publications</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#teaching">Teaching</a>
+          <a class="nav-contact" href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero section-dark">
+        <div class="shell page-hero-grid">
+          <div>
+            <p class="eyebrow hero-eyebrow">Research record · Updated August 2026</p>
+            <h1>Publications</h1>
+          </div>
+          <p>
+            Peer-reviewed work across mechanically driven catalysis, photoactive materials,
+            sustainable energy conversion, and functional oxides.
+          </p>
+        </div>
+      </section>
+
+      <section class="section publication-browser">
+        <div class="shell">
+          <div class="filter-panel" aria-label="Publication filters">
+            <label class="search-field">
+              <span>Search publications</span>
+              <input type="search" placeholder="Title, journal, author, or keyword" data-publication-search />
+            </label>
+            <label>
+              <span>Year</span>
+              <select data-year-filter>
+                <option value="all">All years</option>
+              </select>
+            </label>
+            <label>
+              <span>Authorship</span>
+              <select data-role-filter>
+                <option value="all">All publications</option>
+                <option value="lead">First / corresponding author</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="results-bar">
+            <p><strong data-results-count>30</strong> publications</p>
+            <button class="clear-button" type="button" data-clear-filters>Clear filters</button>
+          </div>
+
+          <div class="publication-list" data-publication-list aria-live="polite">
+            <p class="loading-message">Loading publications…</p>
+          </div>
+          <p class="data-note">
+            Citation counts and journal impact factors reproduce the August 2026 CV snapshot and may
+            change over time. An asterisk in the author list denotes corresponding authorship.
+          </p>
+          <noscript><p>This page needs JavaScript to display the filterable publication list.</p></noscript>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <p>© <span data-current-year>2026</span> Yue Jiang</p>
+        <p>Materials for a cleaner, more circular future.</p>
+        <a href="#main">Back to top ↑</a>
+      </div>
+    </footer>
+    <script src="assets/site.js" defer></script>
+    <script src="assets/publications.js" defer></script>
+  </body>
+</html>
