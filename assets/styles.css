@@ -649,51 +649,209 @@ h3 {
   font-size: 0.7rem;
 }
 
-.research-glyph {
+.research-visual {
   position: relative;
-  height: 145px;
-  margin-top: 32px;
+  height: 175px;
+  margin-top: 28px;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(225, 243, 238, 0.72), rgba(255, 255, 255, 0.26));
+  border: 1px solid rgba(17, 122, 120, 0.12);
+  border-radius: 16px;
+  transition: transform 300ms var(--ease), box-shadow 300ms var(--ease);
 }
 
-.glyph-wave::before {
-  position: absolute;
-  inset: 0;
-  background: repeating-radial-gradient(ellipse at 50% 50%, transparent 0 17px, rgba(169, 228, 215, 0.32) 18px 19px, transparent 20px 30px);
-  content: "";
+.research-card:hover .research-visual {
+  transform: translateY(-3px) scale(1.015);
+  box-shadow: 0 18px 38px rgba(8, 61, 70, 0.12);
 }
 
-.glyph-drop::before {
-  position: absolute;
-  top: 14px;
-  left: 50%;
-  width: 78px;
-  height: 104px;
-  transform: translateX(-50%) rotate(45deg);
-  background: var(--mint-soft);
-  border: 1px solid var(--mint);
-  border-radius: 65% 15% 65% 65%;
-  content: "";
+.research-card-featured .research-visual {
+  height: 260px;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(169, 228, 215, 0.18), transparent 44%),
+    rgba(5, 48, 57, 0.28);
+  border-color: rgba(169, 228, 215, 0.2);
 }
 
-.glyph-loop::before,
-.glyph-loop::after {
-  position: absolute;
-  top: 33px;
-  width: 90px;
-  height: 70px;
-  border: 2px solid var(--teal);
-  border-radius: 50%;
-  content: "";
+.research-visual svg {
+  width: 100%;
+  height: 100%;
 }
 
-.glyph-loop::before { left: calc(50% - 76px); }
-.glyph-loop::after { right: calc(50% - 76px); }
+.visual-hydrogen {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(248, 203, 120, 0.2), transparent 27%),
+    linear-gradient(145deg, #effaf7, #edf7fb);
+}
 
-.glyph-lattice {
-  background-image: radial-gradient(circle, var(--teal) 0 3px, transparent 4px);
-  background-size: 35px 35px;
-  background-position: center;
-  opacity: 0.7;
+.visual-circularity {
+  background:
+    radial-gradient(circle at 48% 50%, rgba(141, 104, 199, 0.12), transparent 34%),
+    linear-gradient(145deg, #f3faf6, #fff8ee);
+}
+
+.visual-lattice {
+  background:
+    radial-gradient(circle at 40% 50%, rgba(255, 130, 108, 0.13), transparent 29%),
+    linear-gradient(145deg, #eff9f7, #f5f1fb);
+}
+
+.svg-label {
+  fill: rgba(255, 255, 255, 0.68);
+  font-family: Aptos, "Segoe UI", sans-serif;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+}
+
+.svg-label.dark {
+  fill: #557078;
+}
+
+.wave-ring {
+  opacity: 0.28;
+  transform-box: view-box;
+  transform-origin: center;
+  animation: wavePulse 3.8s ease-in-out infinite;
+}
+
+.wave-2 { animation-delay: -1.2s; }
+.wave-3 { animation-delay: -2.4s; }
+
+.mech-core {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: coreFloat 3.6s ease-in-out infinite;
+}
+
+.charge {
+  font-size: 11px;
+  font-weight: 900;
+  text-anchor: middle;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.charge-left { animation: chargeLeft 3s ease-in-out infinite; }
+.charge-right { animation: chargeRight 3s ease-in-out infinite; }
+
+.energy-path,
+.electron-flow,
+.cycle-path,
+.dopant-path {
+  stroke-dashoffset: 0;
+  animation: dashFlow 5s linear infinite;
+}
+
+.photo-rays {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rayGlow 3.2s ease-in-out infinite;
+}
+
+.hydrogen-drop {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dropFloat 4s ease-in-out infinite;
+}
+
+.bubble {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bubbleRise 4s ease-in-out infinite;
+}
+
+.bubble-2 { animation-delay: -1.2s; }
+.bubble-3 { animation-delay: -2.3s; }
+
+.bubble text {
+  fill: #0b5c60;
+  font-size: 10px;
+  font-weight: 800;
+  text-anchor: middle;
+}
+
+.cycle-path {
+  stroke-dasharray: 12 9;
+}
+
+.cycle-path-return {
+  animation-direction: reverse;
+}
+
+.waste-icon,
+.value-icon,
+.molecule {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: coreFloat 4.4s ease-in-out infinite;
+}
+
+.value-icon { animation-delay: -1.4s; }
+.molecule { animation-delay: -2.6s; }
+
+.defect-halo {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: defectPulse 2.8s ease-out infinite;
+}
+
+.defect-node,
+.dopant-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nodeGlow 3s ease-in-out infinite;
+}
+
+.dopant-node { animation-delay: -1.5s; }
+
+@keyframes wavePulse {
+  0%, 100% { opacity: 0.2; transform: scale(0.96); }
+  50% { opacity: 0.62; transform: scale(1.04); }
+}
+
+@keyframes coreFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes chargeLeft {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(35px, 10px); }
+}
+
+@keyframes chargeRight {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-35px, -10px); }
+}
+
+@keyframes dashFlow {
+  to { stroke-dashoffset: -72; }
+}
+
+@keyframes rayGlow {
+  0%, 100% { opacity: 0.48; transform: scale(0.92); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes dropFloat {
+  0%, 100% { transform: translateY(1px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes bubbleRise {
+  0%, 100% { opacity: 0.62; transform: translateY(5px) scale(0.92); }
+  50% { opacity: 1; transform: translateY(-7px) scale(1.05); }
+}
+
+@keyframes defectPulse {
+  0% { opacity: 0.52; transform: scale(0.65); }
+  70%, 100% { opacity: 0; transform: scale(1.65); }
+}
+
+@keyframes nodeGlow {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(255, 130, 108, 0)); }
+  50% { filter: drop-shadow(0 0 8px rgba(255, 130, 108, 0.75)); }
 }
 
 .publication-heading {
