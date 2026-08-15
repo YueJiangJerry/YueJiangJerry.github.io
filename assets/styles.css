@@ -667,11 +667,38 @@ h3 {
 }
 
 .research-card-featured .research-visual {
-  height: 260px;
+  height: 330px;
   background:
     radial-gradient(circle at 50% 48%, rgba(169, 228, 215, 0.18), transparent 44%),
     rgba(5, 48, 57, 0.28);
   border-color: rgba(169, 228, 215, 0.2);
+}
+
+.research-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mechanism-overview {
+  margin-bottom: 0;
+  padding: 8px;
+  background: #fff !important;
+  border-color: rgba(255, 255, 255, 0.42) !important;
+}
+
+.mechanism-detail {
+  margin: 26px 0 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 12px;
+}
+
+.mechanism-detail img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .research-visual svg {
@@ -1212,6 +1239,12 @@ h3 {
   color: var(--teal-dark);
   font-size: 0.95rem;
   white-space: nowrap;
+}
+
+.visual-remediation {
+  background:
+    radial-gradient(circle at 78% 34%, rgba(248, 203, 120, 0.2), transparent 28%),
+    linear-gradient(145deg, #edf9f7, #eef7fb);
 }
 
 .gallery-heading {
