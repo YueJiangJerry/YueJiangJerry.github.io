@@ -28,4 +28,4 @@ The site is published from the `main` branch of `YueJiangJerry/YueJiangJerry.git
 
 ## Privacy decisions in this draft
 
-The public site includes the professional UNSW email and the supplied profile photograph. It intentionally excludes the home address and telephone number. No downloadable CV is included until a public-safe version is prepared.
+The public site includes the professional UNSW email, the supplied profile photograph, and a downloadable public-safe CV. The CV excludes the personal contact section, including the home address and telephone number.
