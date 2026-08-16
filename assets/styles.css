@@ -275,8 +275,8 @@ h3 {
 
 .hero {
   position: relative;
-  min-height: 920px;
-  padding: 190px 0 0;
+  min-height: 980px;
+  padding: 170px 0 0;
   overflow: hidden;
 }
 
@@ -337,26 +337,28 @@ h3 {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.55fr);
-  gap: clamp(48px, 8vw, 120px);
-  align-items: end;
+  grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+  column-gap: clamp(52px, 7vw, 92px);
+  row-gap: 54px;
+  align-items: center;
 }
 
 .hero-visual {
-  position: relative;
-  align-self: start;
-  padding-bottom: 210px;
+  display: flex;
+  width: 100%;
+  align-self: center;
+  justify-content: center;
 }
 
 .portrait-frame {
   position: relative;
-  width: 100%;
+  width: min(100%, 410px);
   margin: 0;
   overflow: hidden;
-  aspect-ratio: 4 / 5.2;
+  aspect-ratio: 3 / 4;
   background: #c9ced1;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 160px 160px 20px 20px;
+  border-radius: 205px 205px 22px 22px;
   box-shadow: var(--shadow);
 }
 
@@ -372,7 +374,7 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 17%;
+  object-position: 50% 14%;
 }
 
 .hero-copy h1 {
@@ -464,16 +466,23 @@ h3 {
 }
 
 .hero-card {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: -55px;
-  padding: 30px;
+  position: relative;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(270px, 0.9fr) minmax(320px, 1.1fr) auto;
+  align-items: center;
+  padding: 28px 32px;
+  gap: clamp(28px, 4vw, 52px);
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
+}
+
+.hero-card-role,
+.hero-card-project {
+  min-width: 0;
 }
 
 .card-kicker,
@@ -487,32 +496,41 @@ h3 {
 }
 
 .hero-card h2 {
-  margin-bottom: 14px;
-  font-size: 1.7rem;
+  margin-bottom: 10px;
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
   letter-spacing: -0.025em;
 }
 
-.hero-card > p:not(.card-kicker, .project-label, .project-name) {
+.hero-card-role > p:not(.card-kicker) {
+  margin-bottom: 0;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
 }
 
-.hero-card-rule {
-  height: 1px;
-  margin: 25px 0;
-  background: rgba(255, 255, 255, 0.16);
+.hero-card-project {
+  padding-left: clamp(28px, 4vw, 52px);
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .project-name {
-  margin-bottom: 22px;
-  font-size: 0.95rem;
+  max-width: 390px;
+  margin-bottom: 0;
+  font-size: 0.9rem;
 }
 
 .card-link {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border: 1px solid rgba(169, 228, 215, 0.36);
+  border-radius: 999px;
   color: var(--mint);
-  font-size: 0.82rem;
+  font-size: 0.76rem;
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .stats {
@@ -1615,16 +1633,22 @@ h3 {
   }
 
   .hero-card {
-    position: relative;
-    left: auto;
-    margin-top: -45px;
-    margin-left: -30px;
-    max-width: 560px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
   }
 
   .hero-visual {
-    max-width: 500px;
-    padding-bottom: 0;
+    max-width: 470px;
+    margin-inline: auto;
+  }
+
+  .hero-card-project {
+    padding-left: 26px;
+  }
+
+  .card-link {
+    grid-column: 1 / -1;
+    justify-self: start;
   }
 
   .stats {
@@ -1720,8 +1744,20 @@ h3 {
   }
 
   .hero-card {
+    grid-template-columns: 1fr;
     padding: 24px;
-    margin-left: 0;
+    gap: 22px;
+  }
+
+  .hero-card-project {
+    padding-top: 22px;
+    padding-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    border-left: 0;
+  }
+
+  .card-link {
+    grid-column: auto;
   }
 
   .portrait-frame {
